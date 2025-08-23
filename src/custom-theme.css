@@ -1,0 +1,10 @@
+@theme {
+  --color-yellow-brand: #f7d117;
+  --color-blue-brand: #003882;
+
+  --color-gray-light: #d9d9d9;
+
+  /* --default-font-family: "Raleway", sans-serif; */
+  --default-font-family: "Open Sans", sans-serif;
+  /* --default-font-family: "Roboto", sans-serif; */
+}

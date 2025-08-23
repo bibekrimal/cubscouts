@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cub Scouts</title>
+    <!-- <link href="/src/style.css" rel="stylesheet" /> -->
+  </head>
+  <body class="bg-amber-50/30">
+    <div id="wrapper">
+      <header
+        id="header"
+        class="px-3 sm:px-5 md:px-8 lg:px-20 py-4 flex items-center justify-between absolute top-0 left-0 w-full z-9"
+      >
+        <div class="logo w-25">
+          <a class="block" href="#">
+            <img
+              class="w-full h-auto"
+              src="./src/images/logo.png"
+              width="150"
+              height="150"
+              alt="Cub Scouts"
+            />
+          </a>
+        </div>
+        <div
+          class="bg-white/13 backdrop-blur-lg p-1 rounded-full border-1 border-white/10"
+        >
+          <nav class="main-nav">
+            <ul class="flex">
+              <!-- Current: "bg-yellow-brand text-blue-brand", Default: "text-white hover:bg-yellow-brand hover:text-blue-brand" -->
+              <li>
+                <a
+                  href="#"
+                  aria-current="page"
+                  class="block rounded-full px-3 py-2 text-sm font-medium bg-yellow-brand text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Our Leaders</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Past Activities</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Scout Ranks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >For Parents</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="rounded-bl-2xl">
+          <!-- TODO: There should be "How to Join" inside this page -->
+          <a href="#" class="btn-primary with-icon"
+            >Join Now
+            <span class="icon-holder">
+              <span class="icon-frame">
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </i>
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </i>
+              </span> </span
+          ></a>
+          <!-- <button class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button> -->
+        </div>
+      </header>
+      <div class="hero">
+        <img
+          src="src/images/hero.jpg"
+          alt="image description"
+          width="1920"
+          height="754"
+        />
+      </div>
+      <main id="main">
+        <div class="py-5">
+          <div class="container">
+            <div class="flex gap-7.5">
+              <div
+                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <h2 class="text-2xl font-medium">Events</h2>
+                  <div
+                    class="w-16 h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-7"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-neutral-500">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+
+              <div
+                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <h2 class="text-2xl font-medium">Past Activities</h2>
+                  <div
+                    class="w-16 h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-7"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-neutral-500">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+
+              <div
+                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <h2 class="text-2xl font-medium">For The Parents</h2>
+                  <div
+                    class="w-16 h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-7"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-neutral-500">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
