@@ -26,12 +26,12 @@
         <div
           class="bg-white/13 backdrop-blur-lg p-1 rounded-full border-1 border-white/10"
         >
-          <nav class="main-nav">
+          <nav class="main-nav hidden md:block">
             <ul class="flex">
               <!-- Current: "bg-yellow-brand text-blue-brand", Default: "text-white hover:bg-yellow-brand hover:text-blue-brand" -->
               <li>
                 <a
-                  href="#"
+                  href="index.html"
                   aria-current="page"
                   class="block rounded-full px-3 py-2 text-sm font-medium bg-yellow-brand text-blue-brand transition-all duration-300 delay-0 ease-linear"
                   >Home</a
@@ -39,51 +39,30 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="about.html"
                   class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="leaders.html"
                   class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
                   >Our Leaders</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
-                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
-                  >Events</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
-                  >Past Activities</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="faq.html"
                   class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
                   >FAQs</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="ranks.html"
                   class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
                   >Scout Ranks</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
-                  >For Parents</a
                 >
               </li>
             </ul>
@@ -91,7 +70,7 @@
         </div>
         <div class="rounded-bl-2xl">
           <!-- TODO: There should be "How to Join" inside this page -->
-          <a href="#" class="btn-primary with-icon"
+          <a href="contact.html" class="btn-primary with-icon"
             >Join Now
             <span class="icon-holder">
               <span class="icon-frame">
@@ -156,16 +135,20 @@
         />
       </div>
       <main id="main">
-        <div class="py-5">
+        <div class="py-7.5">
           <div class="container">
-            <div class="flex gap-7.5">
-              <div
-                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-7.5">
+              <a
+                href="#"
+                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-2 md:py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
               >
-                <div class="flex items-center justify-between mb-4">
-                  <h2 class="text-2xl font-medium">Events</h2>
+                <div class="flex items-center justify-between sm:mb-3 md:mb-4">
+                  <strong
+                    class="block text-blue-brand text-md sm:text-lg md:text-2xl font-medium"
+                    >Events</strong
+                  >
                   <div
-                    class="w-16 h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
+                    class="w-10 h-10 md:w-16 md:h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +156,7 @@
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="size-7"
+                      class="size-5 md:size-7"
                     >
                       <path
                         stroke-linecap="round"
@@ -183,18 +166,24 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-neutral-500">
+                <p
+                  class="hidden sm:block sm:text-sm md:text-base text-neutral-500"
+                >
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 </p>
-              </div>
+              </a>
 
-              <div
-                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
+              <a
+                href="#"
+                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-2 md:py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
               >
-                <div class="flex items-center justify-between mb-4">
-                  <h2 class="text-2xl font-medium">Past Activities</h2>
+                <div class="flex items-center justify-between sm:mb-3 md:mb-4">
+                  <strong
+                    class="block text-blue-brand text-md sm:text-lg md:text-2xl font-medium"
+                    >Past Activities</strong
+                  >
                   <div
-                    class="w-16 h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
+                    class="w-10 h-10 md:w-16 md:h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -202,28 +191,34 @@
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="size-7"
+                      class="size-5 md:size-7"
                     >
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                        d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"
                       />
                     </svg>
                   </div>
                 </div>
-                <p class="text-neutral-500">
+                <p
+                  class="hidden sm:block sm:text-sm md:text-base text-neutral-500"
+                >
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 </p>
-              </div>
+              </a>
 
-              <div
-                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
+              <a
+                href="#"
+                class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-2 md:py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
               >
-                <div class="flex items-center justify-between mb-4">
-                  <h2 class="text-2xl font-medium">For The Parents</h2>
+                <div class="flex items-center justify-between sm:mb-3 md:mb-4">
+                  <strong
+                    class="block text-blue-brand text-md sm:text-lg md:text-2xl font-medium"
+                    >For The Parents</strong
+                  >
                   <div
-                    class="w-16 h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
+                    class="w-10 h-10 md:w-16 md:h-16 bg-white rounded-full border-2 border-yellow-brand text-gray-500 shadow-lg shadow-gray-700/15 flex items-center justify-center transition-all group-hover:bg-blue-brand group-hover:border-blue-brand group-hover:text-white"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -231,26 +226,717 @@
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="size-7"
+                      class="size-5 md:size-7"
                     >
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                        d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
                       />
                     </svg>
                   </div>
                 </div>
-                <p class="text-neutral-500">
+                <p
+                  class="hidden sm:block sm:text-sm md:text-base text-neutral-500"
+                >
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
+        <section class="py-7.5">
+          <div class="container">
+            <div class="md:flex items-center gap-5">
+              <div class="hidden md:block md:w-2/5">
+                <img
+                  src="src/images/img1.jpg"
+                  alt="image description"
+                  width="1406"
+                  height="1975"
+                />
+              </div>
+              <div class="md:pl-5">
+                <header class="mb-7">
+                  <div class="flex justify-center md:justify-start mb-3">
+                    <span class="text-yellow-brand mr-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-neutral-500"
+                      >Cub Scout Pack 314 invites you to:</span
+                    >
+                  </div>
+                  <h1 class="text-center md:text-left font-bold">
+                    Join Scouting Night!
+                  </h1>
+                </header>
+                <div class="max-w-60 mb-5 mx-auto md:hidden">
+                  <img
+                    src="src/images/img1.jpg"
+                    alt="image description"
+                    width="1406"
+                    height="1975"
+                  />
+                </div>
+                <div class="text-center md:text-left">
+                  <p class="mb-5">
+                    <time
+                      class="block uppercase font-bold"
+                      datetime="2025-09-09"
+                      >Tuesday, September 9th, 2025</time
+                    >
+                  </p>
+                  <p>
+                    <strong
+                      >Stop by our Open House anytime from 6:30 pm to 8:00 pm to
+                      meet our leaders and learn more about Scouting!</strong
+                    >
+                  </p>
+                  <p>
+                    <strong
+                      >ST. Richards Parish Center 7500 Sw 152nd Street. Palmetto
+                      Bay</strong
+                    >
+                  </p>
+                  <p>
+                    For more information contact Derek at
+                    <a
+                      class="text-current hover:underline"
+                      href="tel:3059873756"
+                      >305-987-3756</a
+                    >
+                    or
+                    <a
+                      class="transition-all hover:underline"
+                      href="mailto:pack314cubmaster@gmail.com"
+                      >pack314cubmaster@gmail.com</a
+                    >
+                  </p>
+                  <!-- <a href="#" class="btn-primary">Join Now</a> -->
+                  <a href="#" class="btn-primary with-icon"
+                    >Join Now
+                    <span class="icon-holder">
+                      <span class="icon-frame">
+                        <i class="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                            />
+                          </svg>
+                        </i>
+                        <i class="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                            />
+                          </svg>
+                        </i>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-5 bg-blue-brand">
+          <div class="container">
+            <h2 class="text-white mb-5">Check our Instagram</h2>
+            <div class="">
+              <!-- SnapWidget -->
+              <iframe
+                src="https://snapwidget.com/embed/1106057"
+                class="snapwidget-widget"
+                allowtransparency="true"
+                frameborder="0"
+                scrolling="no"
+                style="border: none; overflow: hidden; width: 100%"
+                title="Posts from Instagram"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+        <section class="py-8">
+          <div class="container">
+            <div class="md:flex items-center gap-5">
+              <div class="md:w-2/5">
+                <header class="mb-7">
+                  <div class="flex mb-3">
+                    <span class="text-green-brand mr-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-9"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-neutral-500"
+                      >Questions &amp; Answers</span
+                    >
+                  </div>
+                  <h2>What are people usually talking about?</h2>
+                </header>
+                <p class="text-neutral-500 text-sm">
+                  Below is a bulleted FAQ list covering common topics for a Cub
+                  Scout pack, based on typical questions and information
+                  relevant to Cub Scouting. This list is designed to address the
+                  needs of parents, guardians, and new members joining a Cub
+                  Scout pack, reflecting standard practices and structure:
+                </p>
+                <a
+                  href="faq.html"
+                  class="hidden md:inline-flex btn-primary with-icon"
+                  >More FAQs
+                  <span class="icon-holder">
+                    <span class="icon-frame">
+                      <i class="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-4"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                          />
+                        </svg>
+                      </i>
+                      <i class="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-4"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                          />
+                        </svg>
+                      </i>
+                    </span>
+                  </span>
+                </a>
+              </div>
+              <div class="md:w-3/5 md:pl-5">
+                <div class="" x-data="{selected:1}">
+                  <ul class="shadow-box">
+                    <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                      <button
+                        type="button"
+                        class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                        @click="selected !== 1 ? selected = 1 : selected = null"
+                      >
+                        <div class="flex items-center justify-between">
+                          <h3>1. What is Cub Scouting?</h3>
+                          <span
+                            class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                            :class="selected !== 1 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                          >
+                            <div :class="selected !== 1 ? '' : 'hidden'">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                              </svg>
+                            </div>
+                            <div :class="selected !== 1 ? 'hidden' : ''">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M5 12h14"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </div>
+                      </button>
+
+                      <div
+                        class="relative overflow-hidden transition-all max-h-0 duration-700"
+                        x-ref="container1"
+                        x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                      >
+                        <div class="text-sm px-6 py-2">
+                          <p>
+                            Cub Scouting is a program of the Boy Scouts of
+                            America (BSA) for youth in kindergarten through
+                            fifth grade (ages 5–11). It focuses on character
+                            development, leadership skills, outdoor activities,
+                            and community involvement through fun,
+                            age-appropriate adventures.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                      <button
+                        type="button"
+                        class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                        @click="selected !== 2 ? selected = 2 : selected = null"
+                      >
+                        <div class="flex items-center justify-between">
+                          <h3>2. Who can join a Cub Scout pack?</h3>
+                          <span
+                            class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                            :class="selected !== 2 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                          >
+                            <div :class="selected !== 2 ? '' : 'hidden'">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                              </svg>
+                            </div>
+                            <div :class="selected !== 2 ? 'hidden' : ''">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M5 12h14"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </div>
+                      </button>
+
+                      <div
+                        class="relative overflow-hidden transition-all max-h-0 duration-700"
+                        x-ref="container2"
+                        x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+                      >
+                        <div class="text-sm px-6 py-2">
+                          <p>
+                            Boys and girls in kindergarten through fifth grade
+                            are eligible. Kindergarteners join as Lions, first
+                            graders as Tigers, second graders as Wolves, third
+                            graders as Bears, and fourth/fifth graders as
+                            Webelos (an acronym for "WE'll BE LOyal Scouts").
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                      <button
+                        type="button"
+                        class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                        @click="selected !== 3 ? selected = 3 : selected = null"
+                      >
+                        <div class="flex items-center justify-between">
+                          <h3>3. How is a Cub Scout pack organized?</h3>
+                          <span
+                            class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                            :class="selected !== 3 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                          >
+                            <div :class="selected !== 3 ? '' : 'hidden'">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                              </svg>
+                            </div>
+                            <div :class="selected !== 3 ? 'hidden' : ''">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M5 12h14"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </div>
+                      </button>
+
+                      <div
+                        class="relative overflow-hidden transition-all max-h-0 duration-700"
+                        x-ref="container3"
+                        x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+                      >
+                        <div class="text-sm px-6 py-2">
+                          <p>
+                            A pack is made up of dens, which are small groups of
+                            6–8 Scouts of the same grade level. The pack is led
+                            by a Cubmaster and supported by a pack committee,
+                            den leaders, and parent volunteers.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                      <button
+                        type="button"
+                        class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                        @click="selected !== 4 ? selected = 4 : selected = null"
+                      >
+                        <div class="flex items-center justify-between">
+                          <h3>
+                            4. What activities do Cub Scouts participate in?
+                          </h3>
+                          <span
+                            class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                            :class="selected !== 4 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                          >
+                            <div :class="selected !== 4 ? '' : 'hidden'">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                              </svg>
+                            </div>
+                            <div :class="selected !== 4 ? 'hidden' : ''">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M5 12h14"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </div>
+                      </button>
+
+                      <div
+                        class="relative overflow-hidden transition-all max-h-0 duration-700"
+                        x-ref="container4"
+                        x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
+                      >
+                        <div class="text-sm px-6 py-2">
+                          <p>
+                            Activities include den meetings, pack meetings,
+                            camping, hiking, community service, crafts, games,
+                            and earning awards like belt loops, pins, and rank
+                            badges. Examples include Pinewood Derby races,
+                            campouts, and service projects.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                      <button
+                        type="button"
+                        class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                        @click="selected !== 5 ? selected = 5 : selected = null"
+                      >
+                        <div class="flex items-center justify-between">
+                          <h3>5. How often does the den/pack meet?</h3>
+                          <span
+                            class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                            :class="selected !== 5 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                          >
+                            <div :class="selected !== 5 ? '' : 'hidden'">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                              </svg>
+                            </div>
+                            <div :class="selected !== 5 ? 'hidden' : ''">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M5 12h14"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </div>
+                      </button>
+
+                      <div
+                        class="relative overflow-hidden transition-all max-h-0 duration-700"
+                        x-ref="container5"
+                        x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+                      >
+                        <div class="text-sm px-6 py-2">
+                          <p>
+                            We hold both den and pack meetings at Holy
+                            Rosary-St. Richard (7500 SW 152 St) on Tuesday
+                            Nights at 7pm. The meetings are one hour long.
+                          </p>
+                          <p>
+                            Meetings typically occur 2–3 times per month,
+                            focusing on specific activities or badge
+                            requirements. Pack meetings are usually held
+                            monthly, bringing all dens together for
+                            announcements, awards, and group activities.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a
+                    href="faq.html"
+                    class="w-2/3 sm:w-1/2 flex ml-auto justify-between btn-primary with-icon md:hidden"
+                    >More FAQs
+                    <span class="icon-holder">
+                      <span class="icon-frame">
+                        <i class="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                            />
+                          </svg>
+                        </i>
+                        <i class="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                            />
+                          </svg>
+                        </i>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer class="py-10 bg-blue-brand/90 text-white text-sm font-light">
+        <div class="container">
+          <div class="md:flex justify-between gap-20">
+            <div class="md:w-4/12 pb-5 md:pb-0">
+              <strong class="block text-xl uppercase font-semibold mb-5"
+                >Cub Scouts</strong
+              >
+              <address class="not-italic mb-5">
+                St. Richards Parish Center 7500 <br />Sw 152nd Street.
+                <br />Palmetto Bay
+              </address>
+            </div>
+            <div class="md:w-1/2">
+              <strong class="block text-xl uppercase font-semibold mb-5"
+                >Quick Links</strong
+              >
+              <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="leaders.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Our Leaders</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="faq.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >FAQs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ranks.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Scout Ranks</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Join Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="parents.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >For the Parents</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="how-to-join.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >How to Join</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="past-activities.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Past Activities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="events.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Events</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script type="module" src="/src/main.js"></script>
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
   </body>
 </html>
