@@ -10,6 +10,44 @@
 
 @import "./custom-theme.css" layer(theme);
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-neutral-700);
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: bold;
+    @media (min-width: 48rem) {
+      font-size: var(--text-4xl);
+    }
+  }
+  h2 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: var(--color-yellow-brand);
+    &:hover {
+      color: var(--color-blue-brand);
+    }
+  }
+}
+
 @layer utilities {
   .container {
     @apply max-w-5xl md:max-w-7xl mx-auto px-7.5;
@@ -127,6 +165,8 @@
       /* @media (hover: hover) { */
       /* background-color: var(--color-white); */
       /* transform: scale(1); */
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s linear;
       &:before {
         left: -10%;
         transform: translateX(0%) translateY(-50%);
