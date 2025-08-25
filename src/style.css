@@ -96,7 +96,7 @@
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    justify-content: between;
+    justify-content: space-between;
     /* font-family: var(--albert-sans-font); */
     font-weight: 600;
     font-size: 14px;
