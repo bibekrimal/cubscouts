@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cub Scouts</title>
+    <!-- <link href="/src/style.css" rel="stylesheet" /> -->
+  </head>
+  <body class="bg-amber-50/30">
+    <div id="wrapper">
+      <header
+        id="header"
+        x-data="{ isOpen: false }"
+        class="px-3 sm:px-5 md:px-8 lg:px-20 py-1 md:py-4 flex items-center justify-between relative md:absolute md:top-0 md:left-0 w-full z-9 bg-blue-brand md:bg-transparent"
+      >
+        <div class="logo w-17 md:w-25">
+          <a class="block" href="#">
+            <img
+              class="w-full h-auto"
+              src="./src/images/logo.png"
+              width="150"
+              height="150"
+              alt="Cub Scouts"
+            />
+          </a>
+        </div>
+        <div
+          class="bg-blue-brand md:bg-white/13 md:backdrop-blur-lg p-1 border-t-1 md:border-1 border-white/10 absolute top-full left-0 right-0 md:static md:block md:rounded-full"
+          :class="isOpen ? 'block' : 'hidden'"
+        >
+          <nav class="main-nav p-3 md:p-0">
+            <ul class="md:flex">
+              <!-- Current: "bg-yellow-brand text-blue-brand", Default: "text-white hover:bg-yellow-brand hover:text-blue-brand" -->
+              <li>
+                <a
+                  href="index.html"
+                  aria-current="page"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="leaders.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Our Leaders</a
+                >
+              </li>
+              <li>
+                <a
+                  href="faq.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium bg-yellow-brand text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ranks.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Scout Ranks</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- TODO: There should be "How to Join" inside this page -->
+        <a href="contact.html" class="btn-primary with-icon"
+          >Join Now
+          <span class="icon-holder">
+            <span class="icon-frame">
+              <i class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </i>
+              <i class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </i>
+            </span> </span
+        ></a>
+        <button class="menu text-white md:hidden" @click="isOpen = !isOpen">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </header>
+      <div class="hero">
+        <img
+          src="src/images/hero.jpg"
+          alt="image description"
+          width="1920"
+          height="754"
+        />
+      </div>
+      <main id="main">
+        <div class="py-7.5">
+          <div class="container">
+            <div class="breadcrumbs mb-5">
+              <ul class="flex flex-wrap gap-2 text-sm">
+                <li>
+                  <a href="index.html" class="text-blue-brand hover:underline"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </li>
+                <li class="text-yellow-brand">FAQs</li>
+              </ul>
+            </div>
+            <h1 class="mb-7">Frequently Asked Questions</h1>
+            <div class="" x-data="{selected:1}">
+              <ul class="shadow-box">
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 1 ? selected = 1 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>1. What is Cub Scouting?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 1 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 1 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 1 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container1"
+                    x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Cub Scouting is a program of the Boy Scouts of America
+                        (BSA) for youth in kindergarten through fifth grade
+                        (ages 5–11). It focuses on character development,
+                        leadership skills, outdoor activities, and community
+                        involvement through fun, age-appropriate adventures.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 2 ? selected = 2 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>2. Who can join a Cub Scout pack?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 2 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 2 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 2 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container2"
+                    x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Boys and girls in kindergarten through fifth grade are
+                        eligible. Kindergarteners join as Lions, first graders
+                        as Tigers, second graders as Wolves, third graders as
+                        Bears, and fourth/fifth graders as Webelos (an acronym
+                        for "WE'll BE LOyal Scouts").
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 3 ? selected = 3 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>3. How is a Cub Scout pack organized?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 3 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 3 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 3 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container3"
+                    x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        A pack is made up of dens, which are small groups of 6–8
+                        Scouts of the same grade level. The pack is led by a
+                        Cubmaster and supported by a pack committee, den
+                        leaders, and parent volunteers.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 4 ? selected = 4 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>4. What activities do Cub Scouts participate in?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 4 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 4 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 4 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container4"
+                    x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Activities include den meetings, pack meetings, camping,
+                        hiking, community service, crafts, games, and earning
+                        awards like belt loops, pins, and rank badges. Examples
+                        include Pinewood Derby races, campouts, and service
+                        projects.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 5 ? selected = 5 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>5. How often does the den/pack meet?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 5 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 5 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 5 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container5"
+                    x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        We hold both den and pack meetings at Holy Rosary-St.
+                        Richard (7500 SW 152 St) on Tuesday Nights at 7pm. The
+                        meetings are one hour long.
+                      </p>
+                      <p>
+                        Meetings typically occur 2–3 times per month, focusing
+                        on specific activities or badge requirements. Pack
+                        meetings are usually held monthly, bringing all dens
+                        together for announcements, awards, and group
+                        activities.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 6 ? selected = 6 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>6. What is the cost to join a Cub Scout pack?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 6 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 6 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 6 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container6"
+                    x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Costs vary by pack but generally include BSA
+                        registration fees (around $140 annually, pack dues
+                        (approximately $200 per year to cover supplies,
+                        activities and camping reservation), and uniform costs.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 7 ? selected = 7 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>7. What is the uniform, and is it required?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 7 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 7 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 7 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container7"
+                    x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        The uniform includes a blue or tan shirt (depending on
+                        rank), neckerchief, slide, and cap. The uniform is worn
+                        at pack meetings or special gatherings. We have a pack
+                        t-shirt that is worn for most meetings.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 8 ? selected = 8 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>8. What are the time commitments for parents?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 8 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 8 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 8 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container8"
+                    x-bind:style="selected == 8 ? 'max-height: ' + $refs.container8.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Parents are encouraged to volunteer as den leaders,
+                        assistant leaders, or committee members, but roles vary.
+                        At minimum, parents should attend den and pack meetings
+                        and help with occasional events.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 9 ? selected = 9 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>
+                        9. What are rank advancements and how do Scouts earn
+                        them?
+                      </h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 9 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 9 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 9 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container9"
+                    x-bind:style="selected == 9 ? 'max-height: ' + $refs.container9.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Scouts earn rank badges (Lion, Tiger, Wolf, Bear,
+                        Webelos, Arrow of Light) by completing age-specific
+                        adventures. These involve activities like outdoor
+                        skills, citizenship, or personal growth. Awards are
+                        presented at pack meetings.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 10 ? selected = 10 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>
+                        10. Are there opportunities for family involvement?
+                      </h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 10 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 10 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 10 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container10"
+                    x-bind:style="selected == 10 ? 'max-height: ' + $refs.container10.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Yes, Cub Scouting is family-oriented. Siblings and
+                        family members can attend many events, like campouts or
+                        pack activities. Parents are often involved in planning
+                        or supporting events.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 11 ? selected = 11 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>11. What kind of training do leaders receive?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 11 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 11 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 11 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container11"
+                    x-bind:style="selected == 11 ? 'max-height: ' + $refs.container11.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Adult leaders must complete BSA Safeguarding Youth
+                        Training and position-specific training (available
+                        online or in-person). These cover safety, program
+                        planning, and leadership skills to ensure a safe and
+                        engaging experience.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 12 ? selected = 12 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>12. Is Cub Scouting safe?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 12 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 12 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 12 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container12"
+                    x-bind:style="selected == 12 ? 'max-height: ' + $refs.container12.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Safety is a priority. BSA’s Safeguarding Youth policies
+                        include mandatory background checks for leaders,
+                        two-deep leadership (at least two adults at all
+                        activities), and guidelines to prevent one-on-one
+                        contact between adults and Scouts. Outdoor activities
+                        follow strict safety protocols.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 13 ? selected = 13 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>13. What outdoor activities are available?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 13 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 13 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 13 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container13"
+                    x-bind:style="selected == 13 ? 'max-height: ' + $refs.container13.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        We organize camping, hiking, racing events, and day
+                        trips. Activities are designed to be age-appropriate and
+                        follow BSA safety guidelines.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 14 ? selected = 14 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>14. Can Scouts join mid-year?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 14 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 14 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 14 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container14"
+                    x-bind:style="selected == 14 ? 'max-height: ' + $refs.container14.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Yes, Scouts can join at any time, though some activities
+                        or advancements may be easier to start at the beginning
+                        of the school year (fall). Packs will help new Scouts
+                        catch up on rank requirements.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 15 ? selected = 15 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>15. What happens after Cub Scouts?</h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 15 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 15 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 15 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container15"
+                    x-bind:style="selected == 15 ? 'max-height: ' + $refs.container15.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        After fifth grade, Webelos Scouts can transition to a
+                        Scouts BSA troop, where they continue their Scouting
+                        journey with more advanced leadership and outdoor
+                        experiences, potentially earning the Eagle Scout rank.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 16 ? selected = 16 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>
+                        16. How does Cub Scouting support character development?
+                      </h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 16 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 16 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 16 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container16"
+                    x-bind:style="selected == 16 ? 'max-height: ' + $refs.container16.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        The program emphasizes the Scout Oath and Law, teaching
+                        values like trustworthiness, respect, and
+                        responsibility. Activities are designed to build
+                        confidence, teamwork, and ethical decision-making.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="relative rounded-4xl bg-amber-100/60 mb-3">
+                  <button
+                    type="button"
+                    class="w-full px-6 py-4 text-left cursor-pointer hover:bg-amber-100 transition-all ease-linear rounded-4xl"
+                    @click="selected !== 17 ? selected = 17 : selected = null"
+                  >
+                    <div class="flex items-center justify-between">
+                      <h3>
+                        17. Are there scholarships or financial aid for
+                        families?
+                      </h3>
+                      <span
+                        class="rounded-full p-1 w-7 h-7 transition-all flex items-center justify-center"
+                        :class="selected !== 17 ? 'bg-white text-blue-brand' : 'bg-blue-brand text-white'"
+                      >
+                        <div :class="selected !== 17 ? '' : 'hidden'">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                        <div :class="selected !== 17 ? 'hidden' : ''">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                  <div
+                    class="relative overflow-hidden transition-all max-h-0 duration-700"
+                    x-ref="container17"
+                    x-bind:style="selected == 17 ? 'max-height: ' + $refs.container17.scrollHeight + 'px' : ''"
+                  >
+                    <div class="text-sm px-6 py-2">
+                      <p>
+                        Pack 314 currently offers 2 scholarships to offset some
+                        dues associated with scouting. The recipients of these
+                        scholarships are chosen by the a pack and church
+                        representative. Contact us for further details.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <a
+                href="faq.html"
+                class="w-2/3 sm:w-1/2 flex ml-auto justify-between btn-primary with-icon md:hidden"
+                >More FAQs
+                <span class="icon-holder">
+                  <span class="icon-frame">
+                    <i class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </i>
+                    <i class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </i>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="py-10 bg-blue-brand/90 text-white text-sm font-light">
+        <div class="container">
+          <div class="md:flex justify-between gap-20">
+            <div class="md:w-4/12 pb-5 md:pb-0">
+              <strong class="block text-xl uppercase font-semibold mb-5"
+                >Cub Scouts</strong
+              >
+              <address class="not-italic mb-5">
+                St. Richards Parish Center 7500 <br />Sw 152nd Street.
+                <br />Palmetto Bay
+              </address>
+            </div>
+            <div class="md:w-1/2">
+              <strong class="block text-xl uppercase font-semibold mb-5"
+                >Quick Links</strong
+              >
+              <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="leaders.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Our Leaders</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="faq.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >FAQs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ranks.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Scout Ranks</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Join Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="parents.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >For the Parents</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="how-to-join.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >How to Join</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="past-activities.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Past Activities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="events.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Events</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+  </body>
+</html>

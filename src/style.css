@@ -58,7 +58,10 @@
   .main-nav {
     li {
       position: relative;
-      padding: 0 0.5rem;
+      padding-bottom: 0.25rem;
+      @media (min-width: 48rem) {
+        padding: 0 0.5rem;
+      }
 
       &:first-child {
         padding-left: 0;
@@ -70,44 +73,33 @@
 
       &:not(:first-child) {
         &:before {
-          content: "";
-          width: 1px;
-          height: 20px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          margin: auto;
-          background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.5) 50%,
-            rgba(255, 255, 255, 0) 100%
-          );
+          @media (min-width: 48rem) {
+            content: "";
+            width: 1px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            background: linear-gradient(
+              180deg,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.5) 50%,
+              rgba(255, 255, 255, 0) 100%
+            );
+          }
         }
       }
     }
   }
   .btn-primary {
-    /* border-radius: calc(infinity * 1px);
-    background-color: var(--color-yellow-brand);
-    padding-inline: --spacing(5);
-    padding-block: --spacing(2);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-blue-brand);
-    box-shadow: var(--shadow-md);
-    /* overflow: hidden; */
-    /* transition: all 0.3s ease-in-out 0.15s; */
-    /* display: block; */
-    /* position: relative; */
-    /* z-index: 1;  */
-
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     /* font-family: var(--albert-sans-font); */
     font-weight: 600;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 100%;
     color: var(--color-blue-brand);
     padding: 16px 25px;
@@ -116,15 +108,22 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    @media (min-width: 48rem) {
+      font-size: 17px;
+    }
 
     &.with-icon {
-      padding: 5px 5px 5px 25px;
-      gap: 15px;
+      padding: 5px 5px 5px 15px;
+      gap: 10px;
+      @media (min-width: 48rem) {
+        padding-left: 25px;
+        gap: 15px;
+      }
     }
 
     .icon-holder {
-      width: 50px;
-      height: 50px;
+      width: 25px;
+      height: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -133,6 +132,11 @@
       color: var(--color-white);
       border-radius: 100%;
       transition: all 0.3s linear 0s;
+
+      @media (min-width: 48rem) {
+        width: 50px;
+        height: 50px;
+      }
 
       .icon-frame {
         flex: none;
