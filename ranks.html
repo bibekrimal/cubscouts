@@ -10,9 +10,10 @@
     <div id="wrapper">
       <header
         id="header"
-        class="px-3 sm:px-5 md:px-8 lg:px-20 py-4 flex items-center justify-between absolute top-0 left-0 w-full z-9"
+        x-data="{ isOpen: false }"
+        class="px-3 sm:px-5 md:px-8 lg:px-20 py-1 md:py-4 flex items-center justify-between relative md:absolute md:top-0 md:left-0 w-full z-9 bg-blue-brand md:bg-transparent"
       >
-        <div class="logo w-25">
+        <div class="logo w-17 md:w-25">
           <a class="block" href="#">
             <img
               class="w-full h-auto"
@@ -24,10 +25,11 @@
           </a>
         </div>
         <div
-          class="bg-white/13 backdrop-blur-lg p-1 rounded-full border-1 border-white/10"
+          class="bg-blue-brand md:bg-white/13 md:backdrop-blur-lg p-1 border-t-1 md:border-1 border-white/10 absolute top-full left-0 right-0 md:static md:block md:rounded-full"
+          :class="isOpen ? 'block' : 'hidden'"
         >
-          <nav class="main-nav hidden md:block">
-            <ul class="flex">
+          <nav class="main-nav p-3 md:p-0">
+            <ul class="md:flex">
               <!-- Current: "bg-yellow-brand text-blue-brand", Default: "text-white hover:bg-yellow-brand hover:text-blue-brand" -->
               <li>
                 <a
@@ -68,63 +70,61 @@
             </ul>
           </nav>
         </div>
-        <div class="rounded-bl-2xl">
-          <!-- TODO: There should be "How to Join" inside this page -->
-          <a href="contact.html" class="btn-primary with-icon"
-            >Join Now
-            <span class="icon-holder">
-              <span class="icon-frame">
-                <i class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </i>
-                <i class="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </i>
-              </span> </span
-          ></a>
-          <!-- <button class="menu">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button> -->
-        </div>
+        <!-- TODO: There should be "How to Join" inside this page -->
+        <a href="contact.html" class="btn-primary with-icon"
+          >Join Now
+          <span class="icon-holder">
+            <span class="icon-frame">
+              <i class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </i>
+              <i class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </i>
+            </span> </span
+        ></a>
+        <button class="menu text-white md:hidden" @click="isOpen = !isOpen">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
       </header>
       <div class="hero">
         <img
