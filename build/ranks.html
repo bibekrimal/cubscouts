@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cub Scouts</title>
+    <!-- <link href="/src/style.css" rel="stylesheet" /> -->
+    <script type="module" crossorigin src="/assets/main-wqNe_SqB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-BAQ8XViw.css">
+  </head>
+  <body class="bg-amber-50/30">
+    <div id="wrapper">
+      <header
+        id="header"
+        x-data="{ isOpen: false }"
+        class="px-3 sm:px-5 md:px-8 lg:px-20 py-1 md:py-4 flex items-center justify-between relative md:absolute md:top-0 md:left-0 w-full z-9 bg-blue-brand md:bg-transparent"
+      >
+        <div class="logo w-17 md:w-25">
+          <a class="block" href="#">
+            <img
+              class="w-full h-auto"
+              src="/assets/logo-BSBlBxLe.png"
+              width="150"
+              height="150"
+              alt="Cub Scouts"
+            />
+          </a>
+        </div>
+        <div
+          class="bg-blue-brand md:bg-white/13 md:backdrop-blur-lg p-1 border-t-1 md:border-1 border-white/10 absolute top-full left-0 right-0 md:static md:block md:rounded-full"
+          :class="isOpen ? 'block' : 'hidden'"
+        >
+          <nav class="main-nav p-3 md:p-0">
+            <ul class="md:flex">
+              <!-- Current: "bg-yellow-brand text-blue-brand", Default: "text-white hover:bg-yellow-brand hover:text-blue-brand" -->
+              <li>
+                <a
+                  href="index.html"
+                  aria-current="page"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="leaders.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Our Leaders</a
+                >
+              </li>
+              <li>
+                <a
+                  href="faq.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium text-white hover:bg-yellow-brand hover:text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ranks.html"
+                  class="block rounded-full px-3 md:px-2 lg:px-3 py-2 text-sm md:text-xs lg:text-sm font-medium bg-yellow-brand text-blue-brand transition-all duration-300 delay-0 ease-linear"
+                  >Scout Ranks</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- TODO: There should be "How to Join" inside this page -->
+        <a href="contact.html" class="btn-primary with-icon"
+          >Join Now
+          <span class="icon-holder">
+            <span class="icon-frame">
+              <i class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </i>
+              <i class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </i>
+            </span> </span
+        ></a>
+        <button class="menu text-white md:hidden" @click="isOpen = !isOpen">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </header>
+      <div class="hero">
+        <img
+          src="/assets/hero-Bj3ZMmT6.jpg"
+          alt="image description"
+          width="1920"
+          height="754"
+        />
+      </div>
+      <main id="main">
+        <div class="py-7.5">
+          <div class="container">
+            <div class="breadcrumbs mb-5">
+              <ul class="flex flex-wrap gap-2 text-sm">
+                <li>
+                  <a href="index.html" class="text-blue-brand hover:underline"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </li>
+                <li class="text-yellow-brand">Scout Ranks</li>
+              </ul>
+            </div>
+            <h1 class="mb-7">Ranks</h1>
+            <div class="text-center">
+              <div class="w-4/5 sm:w-2/5 mx-auto mb-3">
+                <picture>
+                  <source type="image/avif" srcset="/assets/img3-DiB6Z_Ge.avif" />
+                  <img
+                    src="/assets/img3-Cd90WArJ.png"
+                    alt="image description"
+                    width="720"
+                    height="311"
+                  />
+                </picture>
+              </div>
+              <!-- <div class="md:w-2/5 md:pl-5"> -->
+              <p class="text-2xl mb-10">
+                The ranks and activities tied to a Cub Scout’s grade are as
+                follows:
+              </p>
+            </div>
+            <!-- </div> -->
+            <div
+              class="grid grid-col-1 text-center sm:text-left sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5"
+            >
+              <div class="">
+                <div class="w-50 h-50 shrink-0 mx-auto mb-5">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset="/assets/img-lionpatch-BNngHeqc.avif"
+                    />
+                    <img
+                      src="/assets/img3-Cd90WArJ.png"
+                      alt="Lion Patch"
+                      width="460"
+                      height="460"
+                    />
+                  </picture>
+                </div>
+                <div class="grow">
+                  <p>
+                    <span class="underline">Kindergarten</span> Cub Scouts work
+                    toward the Lion badge by doing adventures in the
+                    <span class="underline">Lion</span> Handbook – here’s our
+                    Lion Rank Advancement page linking to the Scouting America
+                    Lion adventure resource pages plus a local District resource
+                    page with “Assembled” Den Meeting Plans, links, videos and
+                    other ideas for each of the six “required” adventures and
+                    the 16 “elective” adventures.
+                  </p>
+                </div>
+              </div>
+              <div class="">
+                <div class="w-50 h-50 shrink-0 mx-auto mb-5">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset="/assets/img-tigerpatch-CFiZ1hvA.avif"
+                    />
+                    <img
+                      src="/assets/img3-Cd90WArJ.png"
+                      alt="Tiger Patch"
+                      width="460"
+                      height="460"
+                    />
+                  </picture>
+                </div>
+                <div class="grow">
+                  <p>
+                    <span class="underline">First Graders</span> have the
+                    <span class="underline">Tiger</span> badge and Handbook –
+                    see our Tiger Rank Advancement page linking to the Scouting
+                    America Tiger adventure resource pages plus a local District
+                    resource page with “Assembled” Den Meeting Plans, links,
+                    videos and other ideas for each of the six “required”
+                    adventures and the 20 “elective” adventures.
+                  </p>
+                </div>
+              </div>
+              <div class="">
+                <div class="w-50 h-50 shrink-0 mx-auto mb-5">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset="/assets/img-wolfpatch-d2VAptuC.avif"
+                    />
+                    <img
+                      src="/assets/img3-Cd90WArJ.png"
+                      alt="Wolf Patch"
+                      width="460"
+                      height="460"
+                    />
+                  </picture>
+                </div>
+                <div class="grow">
+                  <p>
+                    <span class="underline">Second Graders</span> have the
+                    <span class="underline">Wolf</span> badge and Handbook –
+                    here’s our Wolf Rank Advancement page linking to the
+                    Scouting America Wolf adventure resource pages plus a local
+                    District resource page with “Assembled” Den Meeting Plans,
+                    links, videos and other ideas for each of the six “required”
+                    adventures and the 20 “elective” adventures.
+                  </p>
+                </div>
+              </div>
+              <div class="">
+                <div class="w-50 h-50 shrink-0 mx-auto mb-5">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset="/assets/img-bearpatch-Dcsb8qps.avif"
+                    />
+                    <img
+                      src="/assets/img-bearpatch-Bu6AE5nC.png"
+                      alt="Bear Patch"
+                      width="460"
+                      height="460"
+                    />
+                  </picture>
+                </div>
+                <div class="grow">
+                  <p>
+                    <span class="underline">Third Graders</span> have the
+                    <span class="underline">Bear</span> badge and Handbook –
+                    check out our Bear Rank Advancement page linking to the
+                    Scouting America Bear adventure resource pages plus a local
+                    District resource page with “Assembled” Den Meeting Plans,
+                    links, videos and other ideas for each of the six “required”
+                    adventures and the 20 “elective” adventures.
+                  </p>
+                </div>
+              </div>
+              <div class="">
+                <div class="w-50 h-50 shrink-0 mx-auto mb-5">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset="/assets/img-webelospatch-B2yNscFh.avif"
+                    />
+                    <img
+                      src="/assets/img-webelospatch-CCaRMMsv.png"
+                      alt="Webelos Patch"
+                      width="460"
+                      height="460"
+                    />
+                  </picture>
+                </div>
+                <div class="grow">
+                  <p>
+                    <span class="underline">Fourth Graders</span> work on the
+                    <span class="underline">Webelos</span> badge in the Webelos
+                    Handbook (“Webelos” stands for “WE’ll BE LOyal Scouts”) –
+                    here’s our Webelos Rank Advancement page linking to the
+                    Scouting America Webelos adventure resource pages plus a
+                    local District resource page with “Assembled” Den Meeting
+                    Plans, links, videos and other ideas for each of the six
+                    “required” adventures and the 20 “elective” adventures.
+                  </p>
+                </div>
+              </div>
+              <div class="">
+                <div class="w-50 h-50 shrink-0 mx-auto mb-5">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset="/assets/img-aolpatch--cegVW1G.avif"
+                    />
+                    <img
+                      src="/assets/img-aolpatch-B4YR9tsc.png"
+                      alt="Arrow of Life Patch"
+                      width="460"
+                      height="460"
+                    />
+                  </picture>
+                </div>
+                <div class="grow">
+                  <p>
+                    <span class="underline">Fifth Graders</span> work on the
+                    <span class="underline">Arrow of Light</span> badge in the
+                    Arrow of Light Handbook – see our Arrow of Light Rank
+                    Advancement page linking to the Scouting America Arrow of
+                    Light adventure resource pages plus a local District
+                    resource page with “Assembled” Den Meeting Plans, links,
+                    videos and other ideas for each of the six “required”
+                    adventures and the 16 “elective” adventures. Fifth Grade
+                    Arrow of Light Scouts no longer share a Handbook and
+                    Elective Adventures with Fourth Grade Webelos Scouts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="py-10 bg-blue-brand/90 text-white text-sm font-light">
+        <div class="container">
+          <div class="md:flex justify-between gap-20">
+            <div class="md:w-4/12 pb-5 md:pb-0">
+              <strong class="block text-xl uppercase font-semibold mb-5"
+                >Cub Scouts</strong
+              >
+              <address class="not-italic mb-5">
+                St. Richards Parish Center 7500 <br />Sw 152nd Street.
+                <br />Palmetto Bay
+              </address>
+            </div>
+            <div class="md:w-1/2">
+              <strong class="block text-xl uppercase font-semibold mb-5"
+                >Quick Links</strong
+              >
+              <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="leaders.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Our Leaders</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="faq.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >FAQs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ranks.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Scout Ranks</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Join Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="parents.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >For the Parents</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="how-to-join.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >How to Join</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="past-activities.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Past Activities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="events.html"
+                    class="text-white hover:text-yellow-brand transition-colors"
+                    >Events</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+  </body>
+</html>
