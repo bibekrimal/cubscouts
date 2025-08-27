@@ -50,11 +50,22 @@
 
 @layer utilities {
   .container {
-    @apply max-w-5xl md:max-w-7xl mx-auto px-7.5;
+    max-width: var(--container-5xl);
+    margin-inline: auto;
+    padding-inline: calc(var(--spacing) * 7.5) /* 1.875rem = 30px */;
+
+    @media (width >= 48rem /* 768px */) {
+      max-width: var(--container-7xl) /* 80rem = 1280px */;
+    }
   }
 }
 
 @layer components {
+  #wrapper {
+    width: 100%;
+    position: relative;
+  }
+
   .main-nav {
     li {
       position: relative;

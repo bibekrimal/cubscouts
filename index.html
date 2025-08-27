@@ -4,9 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cub Scouts</title>
-    <!-- <link href="/src/style.css" rel="stylesheet" /> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body class="bg-amber-50/30">
+  <body
+    class="bg-amber-50/30"
+    x-data="{ openModal: false }"
+    x-init="
+        if (!localStorage.getItem('flyerModalShown')) {
+          openModal = true;
+          localStorage.setItem('flyerModalShown', 'true');
+        }
+        $watch('openModal', value => document.body.classList.toggle('overflow-hidden', value))"
+  >
     <div id="wrapper">
       <header
         id="header"
@@ -126,8 +138,9 @@
           </svg>
         </button>
       </header>
-      <div class="hero">
+      <div class="hero md:h-[calc(100vh-15rem)]">
         <img
+          class="block h-full w-full object-cover"
           src="src/images/hero.jpg"
           alt="image description"
           width="1920"
@@ -173,7 +186,7 @@
                 </p>
               </a>
 
-              <a
+              <!-- <a
                 href="past-activities.html"
                 class="group bg-lime-100/30 border-1 border-lime-100 px-5 py-2 md:py-4 rounded-lg flex-1 transition-all hover:bg-white hover:border-white hover:shadow-2xl hover:shadow-neutral-500/10"
               >
@@ -206,7 +219,7 @@
                 >
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 </p>
-              </a>
+              </a> -->
 
               <a
                 href="parents.html"
@@ -249,12 +262,18 @@
           <div class="container">
             <div class="md:flex items-center gap-5">
               <div class="hidden md:block md:w-2/5">
-                <img
-                  src="src/images/img1.jpg"
-                  alt="image description"
-                  width="1406"
-                  height="1975"
-                />
+                <a
+                  href="javascript:void(0);"
+                  @click="openModal = true"
+                  role="button"
+                >
+                  <img
+                    src="src/images/img1.jpg"
+                    alt="image description"
+                    width="1406"
+                    height="1975"
+                  />
+                </a>
               </div>
               <div class="md:pl-5">
                 <header class="mb-7">
@@ -284,12 +303,18 @@
                   </h1>
                 </header>
                 <div class="max-w-60 mb-5 mx-auto md:hidden">
-                  <img
-                    src="src/images/img1.jpg"
-                    alt="image description"
-                    width="1406"
-                    height="1975"
-                  />
+                  <a
+                    href="javascript:void(0);"
+                    @click="openModal = true"
+                    role="button"
+                  >
+                    <img
+                      src="src/images/img1.jpg"
+                      alt="image description"
+                      width="1406"
+                      height="1975"
+                    />
+                  </a>
                 </div>
                 <div class="text-center md:text-left">
                   <p class="mb-5">
@@ -376,13 +401,13 @@
             <div class="">
               <!-- SnapWidget -->
               <iframe
-                src="https://snapwidget.com/embed/1106057"
+                src="https://snapwidget.com/embed/1106239"
                 class="snapwidget-widget"
                 allowtransparency="true"
                 frameborder="0"
                 scrolling="no"
                 style="border: none; overflow: hidden; width: 100%"
-                title="Posts from Instagram"
+                title="Cub Scout Pack 314 - Palmetto Bay, FL"
               ></iframe>
             </div>
           </div>
@@ -917,13 +942,6 @@
                 </li>
                 <li>
                   <a
-                    href="past-activities.html"
-                    class="text-white hover:text-yellow-brand transition-colors"
-                    >Past Activities</a
-                  >
-                </li>
-                <li>
-                  <a
                     href="events.html"
                     class="text-white hover:text-yellow-brand transition-colors"
                     >Events</a
@@ -934,6 +952,44 @@
           </div>
         </div>
       </footer>
+      <div
+        x-show="openModal"
+        x-transition
+        class="fixed top-0 inset-0 p-5 overflow-y-auto bg-black/50 z-50"
+      >
+        <div
+          @click.outside="openModal = false"
+          class="bg-white rounded-2xl shadow-xl relative p-6 max-w-3xl w-full mx-auto"
+        >
+          <button
+            @click="openModal = false"
+            class="absolute top-1.5 right-1.5 hover:text-yellow-brand transition cursor-pointer"
+          >
+            <span class="sr-only">Close modal</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <img
+            class="w-auto h-full"
+            src="./src/images/flyer.jpg"
+            width="1024"
+            height="1325"
+            alt="Join Cub Scouts. Open to boys and girls"
+          />
+        </div>
+      </div>
     </div>
 
     <script type="module" src="/src/main.js"></script>

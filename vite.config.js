@@ -20,6 +20,7 @@ export default defineConfig({
         faq: resolve(__dirname, "faq.html"),
         parents: resolve(__dirname, "parents.html"),
         ranks: resolve(__dirname, "ranks.html"),
+        events: resolve(__dirname, "events.html"),
       },
     },
   },
