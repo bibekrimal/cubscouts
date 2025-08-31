@@ -21,6 +21,7 @@ export default defineConfig({
         parents: resolve(__dirname, "parents.html"),
         ranks: resolve(__dirname, "ranks.html"),
         events: resolve(__dirname, "events.html"),
+        testpage: resolve(__dirname, "test-page.html"),
       },
     },
   },
