@@ -8,6 +8,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   base: "/",
   plugins: [tailwindcss()],
+  server: {
+    host: true, // or '0.0.0.0'
+    port: 5173,
+    allowedHosts: ["pack314.com"],
+  },
   build: {
     outDir: "build",
     cssMinify: true,
