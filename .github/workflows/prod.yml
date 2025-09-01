@@ -5,6 +5,9 @@ on:
     branches:
       - main   # runs every time you push to main
 
+permissions:
+  contents: write    # <--- allow pushing to branches
+
 jobs:
   build:
     runs-on: ubuntu-latest
